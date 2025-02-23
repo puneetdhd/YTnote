@@ -1,0 +1,33 @@
+{
+    "name":"VerifiAI",
+    "version":"1.01",
+    "description":"For verifying information in yt videos",
+    "host_permissions":["https://*.youtube.com/*"],
+    "background":{
+        "service_worker":"background.js"
+    },
+    "content_scripts":[
+        {
+            "matches":["https://*youtube.com/*"],
+            "js":["contentScripts.js"]
+        }
+    ],
+    "web_accessible_resources":{
+        "resources":[
+            "assets/bookmark.png",
+            "assets/play.png",
+            "assets/save.png"
+        ],
+        "matches":["https://*youtube.com/*"]
+    },
+    "action":{
+        "default_icon":{
+            "16":"assets/ext-icon.png",
+            "24":"assets/ext-icon.png",
+            "32":"assets/ext-icon.png"
+        },
+        "default_title":"VerifiAI",
+        "default_popup":"popup.html"
+    },
+    "manifest_version":3
+}
