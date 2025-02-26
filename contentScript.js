@@ -46,6 +46,8 @@
             time:currentTime,
             desc:"Bookmark at: "+getTIme(currentTime,)
         }
+        //to check if we are always using the most updated bookmarks
+        
         currentVideoBookmarks= await fetchBookmarks();
         chrome.storage.sync.set({
         [currentVideo]:JSON.stringify([...currentVideoBookmarks,newBookmark].sort((a,b)=>
