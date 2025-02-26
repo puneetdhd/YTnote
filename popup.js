@@ -1,0 +1,1 @@
+import { getAct } from "./utils";
